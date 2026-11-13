@@ -1,0 +1,288 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #08080c;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    border-bottom: 1px solid #1c1c25;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #8b5cf6;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #a1a1aa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8b5cf6;
+}
+
+/* HOME */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.tag {
+    color: #8b5cf6;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 75px);
+    margin: 25px 0;
+    line-height: 1.1;
+}
+
+.hero h1 span,
+.page-container h1 span {
+    color: #8b5cf6;
+}
+
+.hero p {
+    color: #a1a1aa;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+/* BOTÕES */
+.hero-buttons,
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #8b5cf6;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #7c3aed;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 1px solid #33333d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    border-color: #8b5cf6;
+}
+
+/* PÁGINAS INTERNAS */
+.page-container {
+    padding: 80px 10%;
+    min-height: 85vh;
+}
+
+.page-container h1 {
+    font-size: clamp(35px, 5vw, 60px);
+    margin: 20px 0;
+}
+
+.section-description,
+.contact-section p {
+    color: #a1a1aa;
+    line-height: 1.7;
+}
+
+/* SOBRE */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #8b5cf6;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content p {
+    color: #a1a1aa;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    margin: 30px 0 15px;
+}
+
+/* TECNOLOGIAS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.skills span {
+    padding: 8px 15px;
+    background: #17171f;
+    border: 1px solid #292933;
+    border-radius: 6px;
+    color: #a78bfa;
+}
+
+/* PROJETOS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #111118;
+    border: 1px solid #252530;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info p {
+    color: #a1a1aa;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.project-link {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+/* CONTATO */
+.contact-section {
+    max-width: 700px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.contact-links {
+    justify-content: center;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 5%;
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 230px;
+        height: 280px;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-container {
+        padding: 50px 6%;
+    }
+
+    .contact-section {
+        margin: 40px auto;
+    }
+}
