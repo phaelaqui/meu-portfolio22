@@ -15,7 +15,13 @@ body {
     color: #ffffff;
     font-family: Arial, sans-serif;
     min-height: 100vh;
+    background-image: url("Horizonte\ Cósmico\ High-Tech.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
+
 
 /* NAVBAR */
 .navbar {
